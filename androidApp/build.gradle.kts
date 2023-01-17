@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
-
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -10,11 +8,11 @@ plugins {
 
 android {
     namespace = "com.example.translatorapp.android"
-    compileSdk = 32
+    compileSdk = 33
     defaultConfig {
         applicationId = "com.example.translatorapp.android"
         minSdk = 24
-        targetSdk = 32
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
     }
@@ -22,7 +20,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.0"
+        kotlinCompilerExtensionVersion = Deps.composeVersion
     }
     packagingOptions {
         resources {
