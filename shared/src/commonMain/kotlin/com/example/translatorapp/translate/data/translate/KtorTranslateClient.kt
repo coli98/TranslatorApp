@@ -44,7 +44,7 @@ class KtorTranslateClient(
         }
 
         return try {
-            result.body<TranslatedDto>().translationText
+            result.body<TranslatedDto>().translatedText
         } catch (e: Exception) {
             throw TranslateException(TranslateError.SERVER_ERROR)
         }

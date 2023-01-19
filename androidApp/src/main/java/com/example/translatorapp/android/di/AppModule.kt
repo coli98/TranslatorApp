@@ -29,13 +29,13 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideTranslationClient(httpClient: HttpClient): TranslateClient {
+    fun provideTranslateClient(httpClient: HttpClient): TranslateClient {
         return KtorTranslateClient(httpClient)
     }
 
     @Provides
     @Singleton
-    fun provideDataBaseDriverFactory(app: Application): SqlDriver {
+    fun provideDatabaseDriver(app: Application): SqlDriver {
         return DatabaseDriverFactory(app).create()
     }
 
@@ -47,7 +47,10 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideTranslateUseCase(client: TranslateClient, dataSource: HistoryDataSource): Translate {
+    fun provideTranslateUseCase(
+        client: TranslateClient,
+        dataSource: HistoryDataSource
+    ): Translate {
         return Translate(client, dataSource)
     }
 }

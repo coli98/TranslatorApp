@@ -173,7 +173,6 @@ class TranslateViewModel(
                 is Resource.Success -> {
                     _state.update {
                         it.copy(
-
                             isTranslating = false,
                             toText = result.data
                         )
