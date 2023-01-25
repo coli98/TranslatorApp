@@ -12,6 +12,12 @@
     <string name="error_service_unavailable">Oops, an error happened, try again later</string>
     <string name="client_error">"Oops, an error happened. Please contact the support. "</string>
     <string name="server_error">An error happened. Try again later.</string>
-    <string name="uknown_error">"Unknown Error occurred. Something went wrong! "</string>
+    <string name="unknown_error">"Unknown Error occurred. Something went wrong! "</string>
     <string name="record_audio">Record Audio</string>
+    <string name="speech_recognition_unavailable">Speech recognition is not available</string>
+    <string name="stop_recording">Stop recording</string>
+    <string name="apply">Apply</string>
+    <string name="record_again">Record again</string>
+    <string name="listening">Listening</string>
+    <string name="start_talking">Click record and start talking</string>
 </resources>

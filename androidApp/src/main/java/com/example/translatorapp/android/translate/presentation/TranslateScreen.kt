@@ -40,7 +40,7 @@ fun TranslateScreen(
             TranslateError.SERVICE_UNAVAILABLE -> context.getString(R.string.error_service_unavailable)
             TranslateError.CLIENT_ERROR -> context.getString(R.string.client_error)
             TranslateError.SERVER_ERROR -> context.getString(R.string.server_error)
-            TranslateError.UNKNOWN_ERROR -> context.getString(R.string.uknown_error)
+            TranslateError.UNKNOWN_ERROR -> context.getString(R.string.unknown_error)
             else -> null
         }
         message?.let{
