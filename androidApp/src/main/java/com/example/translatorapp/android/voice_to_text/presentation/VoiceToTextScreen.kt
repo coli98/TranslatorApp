@@ -14,7 +14,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.Refresh
-import androidx.compose.material.icons.rounded.Stop
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
@@ -81,21 +80,21 @@ fun VoiceToTextScreen(
                             DisplayState.SPEAKING -> {
                                 Icon(
                                     imageVector = Icons.Rounded.Close,
-                                    contentDescription = stringResource(com.example.translatorapp.android.R.string.stop_recording),
+                                    contentDescription = stringResource(R.string.stop_recording),
                                     modifier = Modifier.size(50.dp)
                                 )
                             }
                             DisplayState.DISPLAYING_RESULTS -> {
                                 Icon(
                                     imageVector = Icons.Rounded.Check,
-                                    contentDescription = stringResource(com.example.translatorapp.android.R.string.apply),
+                                    contentDescription = stringResource(R.string.apply),
                                     modifier = Modifier.size(50.dp)
                                 )
                             }
                             else -> {
                                 Icon(
-                                    imageVector = ImageVector.vectorResource(id = com.example.translatorapp.android.R.drawable.mic),
-                                    contentDescription = stringResource(com.example.translatorapp.android.R.string.record_audio),
+                                    imageVector = ImageVector.vectorResource(id = R.drawable.mic),
+                                    contentDescription = stringResource(R.string.record_audio),
                                     modifier = Modifier.size(50.dp)
                                 )
                             }
@@ -162,7 +161,7 @@ fun VoiceToTextScreen(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 AnimatedContent(targetState = state.displayState) { displayState ->
-                    when(displayState){
+                    when (displayState) {
                         DisplayState.WAITING_TO_TALK -> {
                             Text(
                                 text = stringResource(id = R.string.start_talking),
@@ -190,12 +189,12 @@ fun VoiceToTextScreen(
                                 text = state.recordError ?: "Unknown Error",
                                 style = MaterialTheme.typography.h2,
                                 textAlign = TextAlign.Center,
-                                color= MaterialTheme.colors.error
+                                color = MaterialTheme.colors.error
                             )
                         }
                         else -> Unit
                     }
-                    
+
                 }
             }
         }
